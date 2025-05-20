@@ -1,0 +1,174 @@
+/* GLOBAL SETTINGS */
+/* GLOBAL SETTINGS */
+/* GLOBAL SETTINGS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+img {
+  width: 100%;
+  display: block;
+  font-style: italic;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin-inline: auto;
+  /* border: 1px solid red; */
+}
+
+/* HEADER + NAV */
+/* HEADER + NAV */
+/* HEADER + NAV */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+}
+  
+.logo img {
+  width: 150px;
+}
+
+.nav-header {
+  display: flex;
+  text-transform: capitalize;
+  list-style-type: none;
+}
+
+.nav-header a,
+.nav-header a:visited {
+  padding: 1rem;
+  color: #777;
+  text-decoration: none;
+}
+
+.nav-header a:hover,
+.nav-header a:focus,
+.nav-header a:focus-visible {
+  color: #000;
+}
+
+/* HERO */
+/* HERO */
+/* HERO */
+
+/* This is a ""mobile first aproach"" solution, I think. It makes both hero sides stack on top and THEN on bigger screen it makes 2 columns, compared to flex where you set items next to each other, make 2 columns right away and AFTER THAT you say at which point you want them to stack on top - "I guess" */
+.hero .wrap {
+  display: grid;
+  container-type: inline-size;
+
+  @media (width > 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Parent of a image, that uses container query, needs the container to be defined */
+.hero-right {
+  container-type: inline-size;
+  padding: 3rem;
+}
+
+/* When the parent of the image gets wider, than 70 vw - meaning it is in 1 column layout (in 2 column layouts, it is smaller than 70vw), it will limit the vertical size of the image to make it not take up a whole screen */
+.hero-right > img {
+  border-radius: 40px;
+
+  @container (width > 70vw) {
+    max-height: 30vh;
+    object-fit: cover;
+  }
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding: 1rem;
+  
+  @container (width > 70vw) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.hero-left > :nth-child(1),
+.hero-left > :nth-child(3) {
+  letter-spacing: 0.5rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.hero-left > :nth-child(2) {
+  padding-block: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: lighter;
+  font-size: 5rem;
+}
+
+.hero-left > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* QUOTE SECTION */
+/* QUOTE SECTION */
+/* QUOTE SECTION */
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.quote-text {
+  padding: 2rem;
+  text-align: center;
+}
+
+.quote-text > * {
+  margin-block: 3rem;
+}
+
+.quote-text p:nth-child(2) {
+  /* text-align: right; */
+  font-style: italic;
+}
+
+.arrow-point-down {
+  width: 1px;
+  margin-inline: auto;
+  border-block-start: solid 30px #fff;
+  border-inline: solid 30px transparent;
+}
+
+.arrow-point-up {
+  width: 1px;
+  margin-inline: auto;
+  border-block-end: solid 30px #fff;
+  border-inline: solid 30px transparent;
+}
+
