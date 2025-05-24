@@ -30,7 +30,11 @@ body {
 .wrap {
   max-width: 1100px;
   margin-inline: auto;
-  /* border: 1px solid red; */
+  /* border: 1px solid rgb(255, 0, 183); */
+}
+
+section {
+  padding-block: 2rem;
 }
 
 /* HEADER + NAV */
@@ -64,7 +68,7 @@ header {
 .nav-header a:hover,
 .nav-header a:focus,
 .nav-header a:focus-visible {
-  color: #000;
+  color: #ff1f1F;
 }
 
 /* HERO */
@@ -118,7 +122,8 @@ header {
   font-style: italic;
 }
 
-.hero-left > :nth-child(2) {
+/* .hero-left > :nth-child(2) { */
+h1 {
   padding-block: 0.5rem;
   letter-spacing: 0.2rem;
   font-weight: lighter;
@@ -128,6 +133,14 @@ header {
 .hero-left > div {
   display: flex;
   justify-content: flex-end;
+}
+
+h2 {
+  padding-block: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: lighter;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 /* QUOTE SECTION */
@@ -172,3 +185,149 @@ header {
   border-inline: solid 30px transparent;
 }
 
+/* SERVICES */
+/* SERVICES */
+/* SERVICES */
+
+.services-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.card:hover {
+  background-color: whitesmoke;
+  transition-duration: 0.5s;
+}
+
+.card img {
+  width: 100px;
+}
+
+/* MACHINES */
+/* MACHINES */
+/* MACHINES */
+
+.machines {
+  background-color: #333;
+  color: #fff;
+}
+
+.machine {
+  display: flex;
+}
+
+.machine > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.machine > div {
+  flex-basis: 40%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (width < 800px) {
+    .machine {
+      flex-direction: column;
+    }
+    .machine > div {
+      text-align: center;
+    }
+  }
+
+/* REFERALS */
+/* REFERALS */
+/* REFERALS */
+
+.referals h4 {
+  font-weight: lighter;
+  color: #777;
+}
+
+.referals-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;  }
+
+.referal {
+  box-sizing: border-box;
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 20px;
+}
+
+.referal:hover {
+  border: solid 2px whitesmoke;
+  transition-duration: 0.5s ;
+}
+
+.referal img {
+  width: 250px;
+}
+
+/* CONTACT */
+/* CONTACT */
+/* CONTACT */
+
+.contact-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile {
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.contact .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact .info img {
+  width: 40px;
+}
+
+.location {
+  display: flex;
+}
+
+.location > * {
+  flex-basis: 50%;
+}
